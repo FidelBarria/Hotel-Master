@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hotel_Master.Data
 {
-    internal class Class1
+    internal class Conecta
     {
     }
 }
