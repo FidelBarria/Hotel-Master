@@ -1,13 +1,13 @@
 ﻿namespace Hotel_Master
 {
-    partial class Form1
+    partial class UserControl1
     {
-        /// <summary>
+        /// <summary> 
         /// Variável de designer necessária.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Limpar os recursos que estão sendo usados.
         /// </summary>
         /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
@@ -20,42 +20,26 @@
             base.Dispose(disposing);
         }
 
-        #region Código gerado pelo Windows Form Designer
+        #region Código gerado pelo Designer de Componentes
 
-        /// <summary>
+        /// <summary> 
         /// Método necessário para suporte ao Designer - não modifique 
         /// o conteúdo deste método com o editor de código.
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEnviar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnEnviar
-            // 
-            this.btnEnviar.Location = new System.Drawing.Point(367, 273);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(75, 23);
-            this.btnEnviar.TabIndex = 0;
-            this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.UseVisualStyleBackColor = true;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
-            // 
-            // Form1
+            // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnEnviar);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "UserControl1";
+            this.Size = new System.Drawing.Size(576, 442);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnEnviar;
     }
 }
-
