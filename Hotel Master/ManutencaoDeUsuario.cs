@@ -30,6 +30,8 @@ namespace Hotel_Master
             dtgUsuario.Columns["permissao"].HeaderText = "Permissão";
             dtgUsuario.Columns["idusuario"].Visible = false ;
             dtgUsuario.Columns["senha_usuario"].Visible = false;
+            txtCpf.Focus();
+            txtTelefone.Focus();
         }
 
         private void ManutencaoDeUsuario_Load(object sender, EventArgs e)
@@ -70,29 +72,41 @@ namespace Hotel_Master
 
             if (btnNovoUsuario.Enabled == true && btnEditaUsuario.Enabled == false && btnExcluiUsuario.Enabled == false)
             {
-                panDados.Enabled = true;
-                Usuario usuario = new Usuario();
-                usuario.usuario = txtUsuario.Text;
-                usuario.nome = txtNome.Text;
-                usuario.email = txtEmail.Text;
-                usuario.telefone = txtTelefone.Text;
-                usuario.cpf = txtCpf.Text;
-                usuario.senha = txtSenha.Text;
-                usuario.permissao = radAdmin.Checked ? "Administrador" : radSupervisor.Checked ? "Supervisor" : radLinha.Checked ? "Linha" : "";
-                usuario.insereUsuario(usuario.nome, usuario.email, usuario.telefone, usuario.cpf, usuario.senha, usuario.usuario, usuario.permissao);
+                if (lblValidaCpf.Text == "CPF Válido" && txtTelefone.Text.Length == 15)
+                {
+                    panDados.Enabled = true;
+                    Usuario usuario = new Usuario();
+                    usuario.usuario = txtUsuario.Text;
+                    usuario.nome = txtNome.Text;
+                    usuario.email = txtEmail.Text;
+                    usuario.telefone = txtTelefone.Text;
+                    usuario.cpf = txtCpf.Text;
+                    usuario.senha = txtSenha.Text;
+                    usuario.permissao = radAdmin.Checked ? "Administrador" : radSupervisor.Checked ? "Supervisor" : radLinha.Checked ? "Linha" : "";
+                    usuario.insereUsuario(usuario.nome, usuario.email, usuario.telefone, usuario.cpf, usuario.senha, usuario.usuario, usuario.permissao);
+                }else MessageBox.Show("Algo está errado favor verificar!");
             } else if (btnEditaUsuario.Enabled == true && btnNovoUsuario.Enabled == false && btnExcluiUsuario.Enabled == false)
             {
-                panDados.Enabled = true;
-                Usuario usuario = new Usuario();
-                usuario.id = Convert.ToInt32(txtId.Text);
-                usuario.usuario = txtUsuario.Text;
-                usuario.nome = txtNome.Text;
-                usuario.email = txtEmail.Text;
-                usuario.telefone = txtTelefone.Text;
-                usuario.cpf = txtCpf.Text;
-                usuario.senha = txtSenha.Text;
-                usuario.permissao = radAdmin.Checked ? "Administrador" : radSupervisor.Checked ? "Supervisor" : radLinha.Checked ? "Linha" : "";
-                usuario.editaUsuario(usuario.id, usuario.nome, usuario.email, usuario.telefone, usuario.cpf, usuario.senha, usuario.usuario, usuario.permissao);
+                if (lblValidaCpf.Text == "CPF Válido" && txtTelefone.Text.Length == 15)
+                {
+                    panDados.Enabled = true;
+                    Usuario usuario = new Usuario();
+                    usuario.id = Convert.ToInt32(txtId.Text);
+                    usuario.usuario = txtUsuario.Text;
+                    usuario.nome = txtNome.Text;
+                    usuario.email = txtEmail.Text;
+                    usuario.telefone = txtTelefone.Text;
+                    usuario.cpf = txtCpf.Text;
+                    usuario.senha = txtSenha.Text;
+                    usuario.permissao = radAdmin.Checked ? "Administrador" : radSupervisor.Checked ? "Supervisor" : radLinha.Checked ? "Linha" : "";
+                    usuario.editaUsuario(usuario.id, usuario.nome, usuario.email, usuario.telefone, usuario.cpf, usuario.senha, usuario.usuario, usuario.permissao);
+                }
+                else
+                {
+                    MessageBox.Show("Algo está errado favor verificar!");
+                }
+
+                
             } else if (btnEditaUsuario.Enabled == false && btnNovoUsuario.Enabled == false && btnExcluiUsuario.Enabled == true)
             {
                 Usuario usuario = new Usuario();
@@ -167,6 +181,31 @@ namespace Hotel_Master
             {
                 btnExcluiUsuario.Text = "Cancela";
             }
+        }
+
+        private void txtCpf_TextChanged(object sender, EventArgs e)
+        {
+            Usuario usuario = new Usuario();
+            if (usuario.validaCpf(txtCpf.Text))
+            {
+                lblValidaCpf.ForeColor = Color.Green;
+                lblValidaCpf.Text = "CPF Válido";
+            }
+            else
+            {
+                lblValidaCpf.ForeColor = Color.Red;
+                lblValidaCpf.Text = "CPF Invalido";
+            }
+        }
+
+        private void txtCpf_MouseClick(object sender, MouseEventArgs e)
+        {
+           txtCpf.Focus();
+        }
+
+        private void txtTelefone_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtTelefone.Focus();
         }
     }
 }

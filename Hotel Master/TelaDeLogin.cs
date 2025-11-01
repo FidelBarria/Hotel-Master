@@ -59,7 +59,7 @@ namespace Hotel_Master
                 {
                     MessageBox.Show("Login realizado com sucesso!");
                     HotelMaster hotelMaster = new HotelMaster();
-                    hotelMaster.pegaTxtUsuario(txtUsuario.Text);
+                    hotelMaster.pegaUsuarioLogado(usuario.usuario, usuario.permissao, usuario.id);
                     hotelMaster.Show();
                     this.Hide();
 
@@ -82,7 +82,12 @@ namespace Hotel_Master
             usuario.telefone = txtTelefone.Text;
             usuario.cpf = txtCpf.Text;
             usuario.senha = txtSenhaUsuario.Text;
-            usuario.insereUsuario(usuario.nome, usuario.email, usuario.telefone, usuario.cpf, usuario.senha, usuario.usuario, "Linha");
+
+            if (lblValidaCpf.Text == "CPF Válido" && txtTelefone.Text.Length == 15 )
+            {
+                usuario.insereUsuario(usuario.nome, usuario.email, usuario.telefone, usuario.cpf, usuario.senha, usuario.usuario, "Linha");
+            }else MessageBox.Show("Algo esta errado favor verificar!");
+
 
             panCadastraUsuario.Visible = !panCadastraUsuario.Visible;
             this.MaximumSize = new Size(400, 400);
@@ -103,6 +108,21 @@ namespace Hotel_Master
         private void TelaDeLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtCpf_TextChanged(object sender, EventArgs e)
+        {
+            Usuario usuario = new Usuario();
+            if (usuario.validaCpf(txtCpf.Text))
+            {
+                lblValidaCpf.ForeColor = Color.Green;
+                lblValidaCpf.Text = "CPF Válido";
+            }
+            else
+            {
+                lblValidaCpf.ForeColor = Color.Red;
+                lblValidaCpf.Text = "CPF Invalido";
+            }
         }
     }
 }

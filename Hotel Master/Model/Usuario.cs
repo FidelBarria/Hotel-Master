@@ -41,17 +41,32 @@ namespace Hotel_Master.Model
                 cmd.Parameters.AddWithValue("@senha", senha);
                 cmd.Prepare();
                 MySqlDataReader reader = cmd.ExecuteReader();
-                bool usuarioValido = reader.HasRows;
-                this.usuarioLogado = usuarioValido;
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        this.id = reader.GetInt32(0);
+                        this.nome = reader.GetString(1);
+                        this.email = reader.GetString(2);
+                        this.telefone = reader.GetString(3);
+                        this.cpf = reader.GetString(4);
+                        this.senha = reader.GetString(5);
+                        this.usuario = reader.GetString(6);
+                        this.permissao = reader.GetString(7);
+                        this.usuarioLogado = true;
+                    }
+                    return true;
+                }
                 reader.Close();
                 conexao.Desconectar(cmd.Connection);
-                return this.usuarioLogado;
+                //return false;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return this.usuarioLogado;
+                return false;
             }
+            return false;
         }
 
         public object verificaUsuarioLogado(string usuario)
@@ -176,6 +191,30 @@ namespace Hotel_Master.Model
             }
         }
 
+        public void alteraSenhaUsuario(int id, string senha)
+        {
+            string alteraSql = "UPDATE usuario SET senha_usuario = @senha WHERE idusuario = @id";
+            try
+            {
+                Conecta conexao = new Conecta();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conexao.Conectar();
+                cmd.CommandText = alteraSql;
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@senha", senha);
+                cmd.Prepare();
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Senha alterada com sucesso!");
+                }
+                conexao.Desconectar(cmd.Connection);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         public void excluiUsuario(int id)
         {
             string excluiSql = "DELETE FROM usuario WHERE idusuario = @id";
@@ -196,5 +235,41 @@ namespace Hotel_Master.Model
                 MessageBox.Show(ex.Message);
             }
         }
-    }    
-}
+
+        public bool validaCpf(string cpf)
+        {
+            int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            string tempCpf;
+            string digito;
+            int soma;
+            int resto;
+            cpf = cpf.Trim();
+            cpf = cpf.Replace(".", "").Replace("-", "");
+            if (cpf.Length != 11)
+                return false;
+            tempCpf = cpf.Substring(0, 9);
+            soma = 0;
+
+            for (int i = 0; i < 9; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+            digito = resto.ToString();
+            tempCpf = tempCpf + digito;
+            soma = 0;
+            for (int i = 0; i < 10; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+            digito = digito + resto.ToString();
+            return cpf.EndsWith(digito);
+        }
+    }   
+}    

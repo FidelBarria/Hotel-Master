@@ -44,8 +44,6 @@
             this.txtNovoUsuario = new System.Windows.Forms.TextBox();
             this.txtNomeUsuario = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.txtCpf = new System.Windows.Forms.TextBox();
             this.txtSenhaUsuario = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
@@ -53,6 +51,9 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.lblValidaCpf = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panCadastraUsuario.SuspendLayout();
             this.SuspendLayout();
@@ -80,7 +81,7 @@
             this.btnFecha.Location = new System.Drawing.Point(220, 183);
             this.btnFecha.Name = "btnFecha";
             this.btnFecha.Size = new System.Drawing.Size(60, 24);
-            this.btnFecha.TabIndex = 10;
+            this.btnFecha.TabIndex = 6;
             this.btnFecha.Text = "Fecha";
             this.btnFecha.UseVisualStyleBackColor = true;
             this.btnFecha.Click += new System.EventHandler(this.btnFecha_Click);
@@ -91,7 +92,7 @@
             this.btnCadastraUsuario.Location = new System.Drawing.Point(117, 213);
             this.btnCadastraUsuario.Name = "btnCadastraUsuario";
             this.btnCadastraUsuario.Size = new System.Drawing.Size(132, 23);
-            this.btnCadastraUsuario.TabIndex = 9;
+            this.btnCadastraUsuario.TabIndex = 7;
             this.btnCadastraUsuario.Text = "Cadastra Usuario";
             this.btnCadastraUsuario.UseVisualStyleBackColor = true;
             this.btnCadastraUsuario.Click += new System.EventHandler(this.btnCadastraUsuario_Click);
@@ -102,6 +103,7 @@
             this.panCadastraUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.79108F));
             this.panCadastraUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.41783F));
             this.panCadastraUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.79109F));
+            this.panCadastraUsuario.Controls.Add(this.txtCpf, 1, 10);
             this.panCadastraUsuario.Controls.Add(this.lblCadastra, 1, 0);
             this.panCadastraUsuario.Controls.Add(this.lblNovoUsuario, 1, 1);
             this.panCadastraUsuario.Controls.Add(this.lblCpf, 1, 9);
@@ -113,9 +115,9 @@
             this.panCadastraUsuario.Controls.Add(this.txtNovoUsuario, 1, 2);
             this.panCadastraUsuario.Controls.Add(this.txtNomeUsuario, 1, 4);
             this.panCadastraUsuario.Controls.Add(this.txtEmail, 1, 6);
-            this.panCadastraUsuario.Controls.Add(this.txtTelefone, 1, 8);
-            this.panCadastraUsuario.Controls.Add(this.txtCpf, 1, 10);
             this.panCadastraUsuario.Controls.Add(this.txtSenhaUsuario, 1, 12);
+            this.panCadastraUsuario.Controls.Add(this.txtTelefone, 1, 8);
+            this.panCadastraUsuario.Controls.Add(this.lblValidaCpf, 2, 10);
             this.panCadastraUsuario.Location = new System.Drawing.Point(0, 242);
             this.panCadastraUsuario.Name = "panCadastraUsuario";
             this.panCadastraUsuario.RowCount = 14;
@@ -161,7 +163,7 @@
             this.lblNovoUsuario.Name = "lblNovoUsuario";
             this.lblNovoUsuario.Size = new System.Drawing.Size(175, 16);
             this.lblNovoUsuario.TabIndex = 1;
-            this.lblNovoUsuario.Text = "Novo Usuario: ";
+            this.lblNovoUsuario.Text = "Novo Usuario: * ";
             this.lblNovoUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblCpf
@@ -195,7 +197,7 @@
             this.btnCadastra.Location = new System.Drawing.Point(92, 318);
             this.btnCadastra.Name = "btnCadastra";
             this.btnCadastra.Size = new System.Drawing.Size(175, 23);
-            this.btnCadastra.TabIndex = 11;
+            this.btnCadastra.TabIndex = 19;
             this.btnCadastra.Text = "Cadastra";
             this.btnCadastra.UseVisualStyleBackColor = true;
             this.btnCadastra.Click += new System.EventHandler(this.btnCadastra_Click);
@@ -261,24 +263,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(175, 22);
             this.txtEmail.TabIndex = 15;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtTelefone.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(92, 197);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(175, 22);
-            this.txtTelefone.TabIndex = 16;
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtCpf.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.Location = new System.Drawing.Point(92, 243);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(175, 22);
-            this.txtCpf.TabIndex = 17;
             // 
             // txtSenhaUsuario
             // 
@@ -348,6 +332,35 @@
             this.txtUsuario.Size = new System.Drawing.Size(178, 20);
             this.txtUsuario.TabIndex = 0;
             // 
+            // txtCpf
+            // 
+            this.txtCpf.Culture = new System.Globalization.CultureInfo("pt-BR");
+            this.txtCpf.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCpf.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtCpf.Location = new System.Drawing.Point(92, 243);
+            this.txtCpf.Mask = "000.000.000-00";
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(175, 20);
+            this.txtCpf.TabIndex = 17;
+            this.txtCpf.TextChanged += new System.EventHandler(this.txtCpf_TextChanged);
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(92, 197);
+            this.txtTelefone.Mask = "(00) 00000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(175, 20);
+            this.txtTelefone.TabIndex = 16;
+            // 
+            // lblValidaCpf
+            // 
+            this.lblValidaCpf.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblValidaCpf.AutoSize = true;
+            this.lblValidaCpf.Location = new System.Drawing.Point(315, 247);
+            this.lblValidaCpf.Name = "lblValidaCpf";
+            this.lblValidaCpf.Size = new System.Drawing.Size(0, 13);
+            this.lblValidaCpf.TabIndex = 20;
+            // 
             // TelaDeLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,11 +409,12 @@
         private System.Windows.Forms.TextBox txtNovoUsuario;
         private System.Windows.Forms.TextBox txtNomeUsuario;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtTelefone;
-        private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.TextBox txtSenhaUsuario;
         private System.Windows.Forms.Button btnFecha;
         public System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.Label lblValidaCpf;
     }
 }
 

@@ -107,6 +107,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caixa.Designer.cs">
+      <DependentUpon>Caixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Conecta.cs" />
+    <Compile Include="Lancamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lancamento.Designer.cs">
+      <DependentUpon>Lancamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data\Conecta.cs" />
     <Compile Include="HotelMaster.cs">
       <SubType>Form</SubType>
@@ -119,6 +132,45 @@
     </Compile>
     <Compile Include="ManutencaoDeUsuario.Designer.cs">
       <DependentUpon>ManutencaoDeUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuApoio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuApoio.Designer.cs">
+      <DependentUpon>MenuApoio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Categoria.cs" />
+    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\Hospede.cs" />
+    <Compile Include="Model\Movimentacao.cs" />
+    <Compile Include="Model\Quarto.cs" />
+    <Compile Include="Model\Reserva.cs" />
+    <Compile Include="Model\StatusReserva.cs" />
+    <Compile Include="Model\Tarifa.cs" />
+    <Compile Include="Model\Usuario.cs" />
+    <Compile Include="NovaReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovaReserva.Designer.cs">
+      <DependentUpon>NovaReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcuraReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcuraReserva.Designer.cs">
+      <DependentUpon>ProcuraReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcuraTarifa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcuraTarifa.Designer.cs">
+      <DependentUpon>ProcuraTarifa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaDeGovernanca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaDeGovernanca.Designer.cs">
+      <DependentUpon>TelaDeGovernanca.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="TelaDeLogin.cs">
@@ -136,11 +188,38 @@
       <DependentUpon>.cs</DependentUpon>
       <SubType>UserControl</SubType>
     </Compile>
-    <EmbeddedResource Include="HotelMaster.resx">
-      <DependentUpon>HotelMaster.cs</DependentUpon>
+    <Compile Include="TrocaDeSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrocaDeSenha.Designer.cs">
+      <DependentUpon>TrocaDeSenha.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Caixa.resx">
+      <DependentUpon>Caixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lancamento.resx">
+      <DependentUpon>Lancamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManutencaoDeUsuario.resx">
       <DependentUpon>ManutencaoDeUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuApoio.resx">
+      <DependentUpon>MenuApoio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaReserva.resx">
+      <DependentUpon>NovaReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcuraReserva.resx">
+      <DependentUpon>ProcuraReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcuraTarifa.resx">
+      <DependentUpon>ProcuraTarifa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaDeGovernanca.resx">
+      <DependentUpon>TelaDeGovernanca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotelMaster.resx">
+      <DependentUpon>HotelMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaDeLogin.resx">
       <DependentUpon>TelaDeLogin.cs</DependentUpon>
@@ -153,9 +232,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include=".resx">
       <DependentUpon>.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrocaDeSenha.resx">
+      <DependentUpon>TrocaDeSenha.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -170,6 +253,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formulario-de-contato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formulario-de-contato %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mais %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\procurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\procurar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atualizar %281%29.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

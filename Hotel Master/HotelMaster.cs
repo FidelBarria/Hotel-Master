@@ -21,9 +21,22 @@ namespace Hotel_Master
             lblData.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
 
-        public void pegaTxtUsuario(string usuario)
+        public void pegaUsuarioLogado(string usuario, string permissao, int id)
         {
-            lblUsuario.Text += usuario;
+           lblUsuario.Text = usuario;
+           lblNivelPermissao.Text = permissao;
+           lblId.Text = Convert.ToString(id);
+
+            if (lblNivelPermissao.Text == "Administrador")
+            {
+                menuManutencaoUsuario.Enabled = true;
+            }else if (lblNivelPermissao.Text == "Supervisor")
+            {
+                menuManutencaoUsuario.Enabled = false;
+            }else if (lblNivelPermissao.Text == "Linha")
+            {
+                menuManutencaoUsuario.Enabled = false;
+            }
         }
 
         private void HotelMaster_Load(object sender, EventArgs e)
@@ -45,11 +58,44 @@ namespace Hotel_Master
         private void novoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ManutencaoDeUsuario manutecaoDeUsuario = new ManutencaoDeUsuario();
-            //manutecaoDeUsuario.Show();
-            manutecaoDeUsuario.TopLevel = false;
-            //manutecaoDeUsuario.Dock = DockStyle.Fill;
-            panForms.Controls.Add(manutecaoDeUsuario);
+            manutecaoDeUsuario.MdiParent = this;
             manutecaoDeUsuario.Show();
         }
+
+        private void menuTrocarSenha_Click(object sender, EventArgs e)
+        {
+            TrocaDeSenha trocaDeSenha = new TrocaDeSenha();
+            trocaDeSenha.pegaUsuario(lblUsuario.Text, lblId.Text);
+            trocaDeSenha.MdiParent = this;
+            trocaDeSenha.Show();
+        }
+
+        private void btnGovernanca_Click(object sender, EventArgs e)
+        {
+            TelaDeGovernanca telaDeGovernanca = new TelaDeGovernanca();
+            telaDeGovernanca.MdiParent = this;
+            var telaDeGovernancaAberto = Application.OpenForms.OfType<TelaDeGovernanca>().FirstOrDefault();
+            if (telaDeGovernancaAberto == null)
+            {
+                telaDeGovernanca.Show();
+            }else telaDeGovernanca.Hide();
+            
+        }
+
+        private void btnNovaReserva_Click(object sender, EventArgs e)
+        {
+            NovaReserva novaReserva = new NovaReserva();
+            novaReserva.modoCriaouEdita("CRIA");
+            novaReserva.MdiParent = this;
+            novaReserva.Show();
+        }
+
+        private void btnBuscaReserva_Click(object sender, EventArgs e)
+        {
+            ProcuraReserva procuraReserva = new ProcuraReserva();
+            procuraReserva.MdiParent = this;
+            procuraReserva.Show();
+        }
+
     }
 }

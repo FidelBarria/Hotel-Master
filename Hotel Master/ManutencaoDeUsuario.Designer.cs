@@ -44,14 +44,14 @@
             this.btnExcluiUsuario = new System.Windows.Forms.Button();
             this.btnEditaUsuario = new System.Windows.Forms.Button();
             this.panDados = new System.Windows.Forms.Panel();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.btnConfirma = new System.Windows.Forms.Button();
             this.radLinha = new System.Windows.Forms.RadioButton();
             this.radSupervisor = new System.Windows.Forms.RadioButton();
             this.radAdmin = new System.Windows.Forms.RadioButton();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.txtCpf = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -64,6 +64,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.dtgUsuario = new System.Windows.Forms.DataGridView();
+            this.lblValidaCpf = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -245,14 +246,15 @@
             // 
             // panDados
             // 
+            this.panDados.Controls.Add(this.lblValidaCpf);
+            this.panDados.Controls.Add(this.txtTelefone);
+            this.panDados.Controls.Add(this.txtCpf);
             this.panDados.Controls.Add(this.btnConfirma);
             this.panDados.Controls.Add(this.radLinha);
             this.panDados.Controls.Add(this.radSupervisor);
             this.panDados.Controls.Add(this.radAdmin);
             this.panDados.Controls.Add(this.txtSenha);
             this.panDados.Controls.Add(this.txtEmail);
-            this.panDados.Controls.Add(this.txtTelefone);
-            this.panDados.Controls.Add(this.txtCpf);
             this.panDados.Controls.Add(this.txtNome);
             this.panDados.Controls.Add(this.txtUsuario);
             this.panDados.Controls.Add(this.txtId);
@@ -271,6 +273,25 @@
             this.panDados.Name = "panDados";
             this.panDados.Size = new System.Drawing.Size(470, 391);
             this.panDados.TabIndex = 3;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(74, 154);
+            this.txtTelefone.Mask = "(00) 00000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(168, 22);
+            this.txtTelefone.TabIndex = 12;
+            this.txtTelefone.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtTelefone_MouseClick);
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.Location = new System.Drawing.Point(74, 117);
+            this.txtCpf.Mask = "000.000.000-00";
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(168, 22);
+            this.txtCpf.TabIndex = 11;
+            this.txtCpf.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtCpf_MouseClick);
+            this.txtCpf.TextChanged += new System.EventHandler(this.txtCpf_TextChanged);
             // 
             // btnConfirma
             // 
@@ -329,20 +350,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(168, 22);
             this.txtEmail.TabIndex = 13;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(74, 154);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(168, 22);
-            this.txtTelefone.TabIndex = 12;
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Location = new System.Drawing.Point(74, 117);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(168, 22);
-            this.txtCpf.TabIndex = 11;
             // 
             // txtNome
             // 
@@ -460,6 +467,14 @@
             this.dtgUsuario.TabIndex = 1;
             this.dtgUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsuario_CellClick);
             // 
+            // lblValidaCpf
+            // 
+            this.lblValidaCpf.AutoSize = true;
+            this.lblValidaCpf.Location = new System.Drawing.Point(249, 125);
+            this.lblValidaCpf.Name = "lblValidaCpf";
+            this.lblValidaCpf.Size = new System.Drawing.Size(0, 16);
+            this.lblValidaCpf.TabIndex = 21;
+            // 
             // ManutencaoDeUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -519,8 +534,6 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtTelefone;
-        private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.RadioButton radLinha;
@@ -528,5 +541,8 @@
         private System.Windows.Forms.RadioButton radAdmin;
         private System.Windows.Forms.Button btnConfirma;
         private System.Windows.Forms.DataGridView dtgUsuario;
+        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.Label lblValidaCpf;
     }
 }
