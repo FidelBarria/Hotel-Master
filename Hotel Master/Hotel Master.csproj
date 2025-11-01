@@ -107,7 +107,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Caixa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,7 +126,6 @@
     <Compile Include="Lancamento.Designer.cs">
       <DependentUpon>Lancamento.cs</DependentUpon>
     </Compile>
-=======
     <Compile Include="Data\Conecta.cs" />
     <Compile Include="HotelMaster.cs">
       <SubType>Form</SubType>
@@ -135,14 +133,12 @@
     <Compile Include="HotelMaster.Designer.cs">
       <DependentUpon>HotelMaster.cs</DependentUpon>
     </Compile>
->>>>>>> 0bba61a82b87ed976bbd17d802827e7f211303c9
     <Compile Include="ManutencaoDeUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManutencaoDeUsuario.Designer.cs">
       <DependentUpon>ManutencaoDeUsuario.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="MenuApoio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,9 +178,7 @@
     <Compile Include="TelaDeGovernanca.Designer.cs">
       <DependentUpon>TelaDeGovernanca.cs</DependentUpon>
     </Compile>
-=======
     <Compile Include="Model\Usuario.cs" />
->>>>>>> 0bba61a82b87ed976bbd17d802827e7f211303c9
     <Compile Include="TelaDeLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,7 +194,6 @@
       <DependentUpon>.cs</DependentUpon>
       <SubType>UserControl</SubType>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="TrocaDeSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,14 +227,12 @@
     <EmbeddedResource Include="TelaDeGovernanca.resx">
       <DependentUpon>TelaDeGovernanca.cs</DependentUpon>
     </EmbeddedResource>
-=======
     <EmbeddedResource Include="HotelMaster.resx">
       <DependentUpon>HotelMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManutencaoDeUsuario.resx">
       <DependentUpon>ManutencaoDeUsuario.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> 0bba61a82b87ed976bbd17d802827e7f211303c9
     <EmbeddedResource Include="TelaDeLogin.resx">
       <DependentUpon>TelaDeLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,12 +249,9 @@
     <EmbeddedResource Include=".resx">
       <DependentUpon>.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="TrocaDeSenha.resx">
       <DependentUpon>TrocaDeSenha.cs</DependentUpon>
     </EmbeddedResource>
-=======
->>>>>>> 0bba61a82b87ed976bbd17d802827e7f211303c9
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -278,7 +266,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-<<<<<<< HEAD
   <ItemGroup>
     <None Include="Resources\formulario-de-contato.png" />
   </ItemGroup>
@@ -306,8 +293,6 @@
   <ItemGroup>
     <None Include="Resources\atualizar %281%29.png" />
   </ItemGroup>
-=======
   <ItemGroup />
->>>>>>> 0bba61a82b87ed976bbd17d802827e7f211303c9
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
