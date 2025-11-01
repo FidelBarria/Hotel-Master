@@ -19,10 +19,16 @@ namespace Hotel_Master
         bool btnDifDiariaClicado = false;
         bool btnRestauranteClicado = false;
         bool btnFrigobarClicado = false;
-        
+        bool btnMasterCreditoClicado = false;
+        bool btnMasterDebitoClicado = false;
+
         public Lancamento()
         {
             InitializeComponent();
+
+            cbJanela.SelectedItem = cbJanela.Items[0];
+            cbJanelaAeB.SelectedItem = cbJanelaAeB.Items[0];
+            cbJanelaPagamento.SelectedItem = cbJanelaPagamento.Items[0];
         }
 
         int idHospede = 0;
@@ -84,6 +90,34 @@ namespace Hotel_Master
                 btnFrigobar.BackColor = Color.White;
             }
         }
+        private void btnMasterCredito_Click(object sender, EventArgs e)
+        {
+            btnMasterCreditoClicado = true;
+            btnMasterDebitoClicado = false;
+            if (btnMasterCreditoClicado == true)
+            {
+                btnMasterCredito.BackColor = Color.LightGreen;
+                btnMasterDebito.BackColor = Color.White;
+            }
+            else
+            {
+                btnMasterCredito.BackColor = Color.White;
+            }
+        }
+        private void btnMasterDebito_Click(object sender, EventArgs e)
+        {
+            btnMasterDebitoClicado = true;
+            btnMasterCreditoClicado = false;
+            if (btnMasterDebitoClicado == true)
+            {
+                btnMasterDebito.BackColor = Color.LightGreen;
+                btnMasterCredito.BackColor = Color.White;
+            }
+            else
+            {
+                btnMasterDebito.BackColor = Color.White;
+            }
+        }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -143,6 +177,30 @@ namespace Hotel_Master
         {
             txtIdHospede.Text = this.idHospede.ToString();
             txtReserva.Text = this.idReserva.ToString();
+        }
+
+        private void btnLancarPagamento_Click(object sender, EventArgs e)
+        {
+            movimentacao.tipoMovimentacao = "E";
+            movimentacao.valorMovimentacao = -(Convert.ToSingle(txtValorPagamento.Text));
+            if (btnMasterCreditoClicado == true)
+            {
+                btnMasterCredito.Text.Trim();
+                int tamBtnMasterCredito = btnMasterCredito.Text.Length;
+                movimentacao.descricaoMovimentacao = btnMasterCredito.Text.Insert(tamBtnMasterCredito, txtDescPagamento.Text);
+            }
+            else if (btnMasterDebitoClicado == true)
+            {
+                btnMasterDebito.Text.Trim();
+                int tamBtnMasterDebito = btnMasterDebito.Text.Length;
+                movimentacao.descricaoMovimentacao = btnMasterDebito.Text.Insert(tamBtnMasterDebito, txtDescAeB.Text);
+            }
+            movimentacao.dataMovimentacao = DateTime.Now;
+            movimentacao.idReserva = idReserva;
+            movimentacao.idHospede = idHospede;
+            movimentacao.janela = cbJanelaPagamento.SelectedIndex + 1;
+            movimentacao.insereMovimentacao();
+            this.Close();
         }
 
 

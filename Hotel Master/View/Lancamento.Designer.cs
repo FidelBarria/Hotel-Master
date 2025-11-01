@@ -32,38 +32,50 @@
             this.panPrincipal = new System.Windows.Forms.Panel();
             this.tabLancamento = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtDescricaoDiaria = new System.Windows.Forms.TextBox();
+            this.lblDescricaoDiaria = new System.Windows.Forms.Label();
+            this.lblValor = new System.Windows.Forms.Label();
             this.lblJanela = new System.Windows.Forms.Label();
             this.cbJanela = new System.Windows.Forms.ComboBox();
-            this.txtIdHospede = new System.Windows.Forms.TextBox();
-            this.txtReserva = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblReserva = new System.Windows.Forms.Label();
             this.btnSalvarDiaria = new System.Windows.Forms.Button();
             this.txtValorDiaria = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDifDiaria = new System.Windows.Forms.Button();
             this.btnDiaria = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btnLancarAeB = new System.Windows.Forms.Button();
-            this.gpbAEB = new System.Windows.Forms.GroupBox();
-            this.btnFrigobar = new System.Windows.Forms.Button();
-            this.btnRestaurante = new System.Windows.Forms.Button();
-            this.lblValor = new System.Windows.Forms.Label();
-            this.lblDescricaoDiaria = new System.Windows.Forms.Label();
-            this.txtDescricaoDiaria = new System.Windows.Forms.TextBox();
-            this.lblJanelaAeB = new System.Windows.Forms.Label();
-            this.cbJanelaAeB = new System.Windows.Forms.ComboBox();
             this.txtDescAeB = new System.Windows.Forms.TextBox();
             this.lblDescAeB = new System.Windows.Forms.Label();
             this.lblValorAeB = new System.Windows.Forms.Label();
             this.txtValorAeB = new System.Windows.Forms.TextBox();
+            this.lblJanelaAeB = new System.Windows.Forms.Label();
+            this.cbJanelaAeB = new System.Windows.Forms.ComboBox();
+            this.btnLancarAeB = new System.Windows.Forms.Button();
+            this.gpbAEB = new System.Windows.Forms.GroupBox();
+            this.btnFrigobar = new System.Windows.Forms.Button();
+            this.btnRestaurante = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtDescPagamento = new System.Windows.Forms.TextBox();
+            this.lblDescPagamento = new System.Windows.Forms.Label();
+            this.lblValorPagamento = new System.Windows.Forms.Label();
+            this.txtValorPagamento = new System.Windows.Forms.TextBox();
+            this.lblJanelaPagamento = new System.Windows.Forms.Label();
+            this.cbJanelaPagamento = new System.Windows.Forms.ComboBox();
+            this.btnLancarPagamento = new System.Windows.Forms.Button();
+            this.gpPagamento = new System.Windows.Forms.GroupBox();
+            this.btnMasterDebito = new System.Windows.Forms.Button();
+            this.btnMasterCredito = new System.Windows.Forms.Button();
+            this.lblReserva = new System.Windows.Forms.Label();
+            this.txtIdHospede = new System.Windows.Forms.TextBox();
+            this.txtReserva = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panPrincipal.SuspendLayout();
             this.tabLancamento.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.gpbAEB.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.gpPagamento.SuspendLayout();
             this.SuspendLayout();
             // 
             // panPrincipal
@@ -110,6 +122,31 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Diaria";
             // 
+            // txtDescricaoDiaria
+            // 
+            this.txtDescricaoDiaria.Location = new System.Drawing.Point(415, 43);
+            this.txtDescricaoDiaria.Name = "txtDescricaoDiaria";
+            this.txtDescricaoDiaria.Size = new System.Drawing.Size(98, 22);
+            this.txtDescricaoDiaria.TabIndex = 14;
+            // 
+            // lblDescricaoDiaria
+            // 
+            this.lblDescricaoDiaria.AutoSize = true;
+            this.lblDescricaoDiaria.Location = new System.Drawing.Point(373, 46);
+            this.lblDescricaoDiaria.Name = "lblDescricaoDiaria";
+            this.lblDescricaoDiaria.Size = new System.Drawing.Size(41, 16);
+            this.lblDescricaoDiaria.TabIndex = 13;
+            this.lblDescricaoDiaria.Text = "Desc:";
+            // 
+            // lblValor
+            // 
+            this.lblValor.AutoSize = true;
+            this.lblValor.Location = new System.Drawing.Point(370, 80);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(44, 16);
+            this.lblValor.TabIndex = 12;
+            this.lblValor.Text = "Valor:";
+            // 
             // lblJanela
             // 
             this.lblJanela.AutoSize = true;
@@ -131,40 +168,6 @@
             this.cbJanela.Name = "cbJanela";
             this.cbJanela.Size = new System.Drawing.Size(53, 24);
             this.cbJanela.TabIndex = 10;
-            // 
-            // txtIdHospede
-            // 
-            this.txtIdHospede.Location = new System.Drawing.Point(220, 6);
-            this.txtIdHospede.Name = "txtIdHospede";
-            this.txtIdHospede.ReadOnly = true;
-            this.txtIdHospede.Size = new System.Drawing.Size(53, 22);
-            this.txtIdHospede.TabIndex = 9;
-            // 
-            // txtReserva
-            // 
-            this.txtReserva.Location = new System.Drawing.Point(79, 6);
-            this.txtReserva.Name = "txtReserva";
-            this.txtReserva.ReadOnly = true;
-            this.txtReserva.Size = new System.Drawing.Size(53, 22);
-            this.txtReserva.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(144, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Hospede: ";
-            // 
-            // lblReserva
-            // 
-            this.lblReserva.AutoSize = true;
-            this.lblReserva.Location = new System.Drawing.Point(7, 9);
-            this.lblReserva.Name = "lblReserva";
-            this.lblReserva.Size = new System.Drawing.Size(66, 16);
-            this.lblReserva.TabIndex = 5;
-            this.lblReserva.Text = "Reserva: ";
             // 
             // btnSalvarDiaria
             // 
@@ -214,16 +217,6 @@
             this.btnDiaria.UseVisualStyleBackColor = true;
             this.btnDiaria.Click += new System.EventHandler(this.btnDiaria_Click);
             // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.LightBlue;
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(537, 192);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Pagamento";
-            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.LightBlue;
@@ -240,6 +233,60 @@
             this.tabPage3.Size = new System.Drawing.Size(537, 164);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "A&B";
+            // 
+            // txtDescAeB
+            // 
+            this.txtDescAeB.Location = new System.Drawing.Point(420, 46);
+            this.txtDescAeB.Name = "txtDescAeB";
+            this.txtDescAeB.Size = new System.Drawing.Size(98, 22);
+            this.txtDescAeB.TabIndex = 20;
+            // 
+            // lblDescAeB
+            // 
+            this.lblDescAeB.AutoSize = true;
+            this.lblDescAeB.Location = new System.Drawing.Point(378, 49);
+            this.lblDescAeB.Name = "lblDescAeB";
+            this.lblDescAeB.Size = new System.Drawing.Size(41, 16);
+            this.lblDescAeB.TabIndex = 19;
+            this.lblDescAeB.Text = "Desc:";
+            // 
+            // lblValorAeB
+            // 
+            this.lblValorAeB.AutoSize = true;
+            this.lblValorAeB.Location = new System.Drawing.Point(375, 83);
+            this.lblValorAeB.Name = "lblValorAeB";
+            this.lblValorAeB.Size = new System.Drawing.Size(44, 16);
+            this.lblValorAeB.TabIndex = 18;
+            this.lblValorAeB.Text = "Valor:";
+            // 
+            // txtValorAeB
+            // 
+            this.txtValorAeB.Location = new System.Drawing.Point(420, 80);
+            this.txtValorAeB.Name = "txtValorAeB";
+            this.txtValorAeB.Size = new System.Drawing.Size(98, 22);
+            this.txtValorAeB.TabIndex = 17;
+            // 
+            // lblJanelaAeB
+            // 
+            this.lblJanelaAeB.AutoSize = true;
+            this.lblJanelaAeB.Location = new System.Drawing.Point(397, 14);
+            this.lblJanelaAeB.Name = "lblJanelaAeB";
+            this.lblJanelaAeB.Size = new System.Drawing.Size(58, 16);
+            this.lblJanelaAeB.TabIndex = 16;
+            this.lblJanelaAeB.Text = "Janela: ";
+            // 
+            // cbJanelaAeB
+            // 
+            this.cbJanelaAeB.FormattingEnabled = true;
+            this.cbJanelaAeB.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cbJanelaAeB.Location = new System.Drawing.Point(461, 11);
+            this.cbJanelaAeB.Name = "cbJanelaAeB";
+            this.cbJanelaAeB.Size = new System.Drawing.Size(53, 24);
+            this.cbJanelaAeB.TabIndex = 15;
             // 
             // btnLancarAeB
             // 
@@ -282,84 +329,152 @@
             this.btnRestaurante.UseVisualStyleBackColor = true;
             this.btnRestaurante.Click += new System.EventHandler(this.btnRestaurante_Click);
             // 
-            // lblValor
+            // tabPage2
             // 
-            this.lblValor.AutoSize = true;
-            this.lblValor.Location = new System.Drawing.Point(370, 80);
-            this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(44, 16);
-            this.lblValor.TabIndex = 12;
-            this.lblValor.Text = "Valor:";
+            this.tabPage2.BackColor = System.Drawing.Color.LightBlue;
+            this.tabPage2.Controls.Add(this.txtDescPagamento);
+            this.tabPage2.Controls.Add(this.lblDescPagamento);
+            this.tabPage2.Controls.Add(this.lblValorPagamento);
+            this.tabPage2.Controls.Add(this.txtValorPagamento);
+            this.tabPage2.Controls.Add(this.lblJanelaPagamento);
+            this.tabPage2.Controls.Add(this.cbJanelaPagamento);
+            this.tabPage2.Controls.Add(this.btnLancarPagamento);
+            this.tabPage2.Controls.Add(this.gpPagamento);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(537, 164);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Pagamento";
             // 
-            // lblDescricaoDiaria
+            // txtDescPagamento
             // 
-            this.lblDescricaoDiaria.AutoSize = true;
-            this.lblDescricaoDiaria.Location = new System.Drawing.Point(373, 46);
-            this.lblDescricaoDiaria.Name = "lblDescricaoDiaria";
-            this.lblDescricaoDiaria.Size = new System.Drawing.Size(41, 16);
-            this.lblDescricaoDiaria.TabIndex = 13;
-            this.lblDescricaoDiaria.Text = "Desc:";
+            this.txtDescPagamento.Location = new System.Drawing.Point(422, 45);
+            this.txtDescPagamento.Name = "txtDescPagamento";
+            this.txtDescPagamento.Size = new System.Drawing.Size(98, 22);
+            this.txtDescPagamento.TabIndex = 28;
             // 
-            // txtDescricaoDiaria
+            // lblDescPagamento
             // 
-            this.txtDescricaoDiaria.Location = new System.Drawing.Point(415, 43);
-            this.txtDescricaoDiaria.Name = "txtDescricaoDiaria";
-            this.txtDescricaoDiaria.Size = new System.Drawing.Size(98, 22);
-            this.txtDescricaoDiaria.TabIndex = 14;
+            this.lblDescPagamento.AutoSize = true;
+            this.lblDescPagamento.Location = new System.Drawing.Point(380, 48);
+            this.lblDescPagamento.Name = "lblDescPagamento";
+            this.lblDescPagamento.Size = new System.Drawing.Size(41, 16);
+            this.lblDescPagamento.TabIndex = 27;
+            this.lblDescPagamento.Text = "Desc:";
             // 
-            // lblJanelaAeB
+            // lblValorPagamento
             // 
-            this.lblJanelaAeB.AutoSize = true;
-            this.lblJanelaAeB.Location = new System.Drawing.Point(397, 14);
-            this.lblJanelaAeB.Name = "lblJanelaAeB";
-            this.lblJanelaAeB.Size = new System.Drawing.Size(58, 16);
-            this.lblJanelaAeB.TabIndex = 16;
-            this.lblJanelaAeB.Text = "Janela: ";
+            this.lblValorPagamento.AutoSize = true;
+            this.lblValorPagamento.Location = new System.Drawing.Point(377, 82);
+            this.lblValorPagamento.Name = "lblValorPagamento";
+            this.lblValorPagamento.Size = new System.Drawing.Size(44, 16);
+            this.lblValorPagamento.TabIndex = 26;
+            this.lblValorPagamento.Text = "Valor:";
             // 
-            // cbJanelaAeB
+            // txtValorPagamento
             // 
-            this.cbJanelaAeB.FormattingEnabled = true;
-            this.cbJanelaAeB.Items.AddRange(new object[] {
+            this.txtValorPagamento.Location = new System.Drawing.Point(422, 79);
+            this.txtValorPagamento.Name = "txtValorPagamento";
+            this.txtValorPagamento.Size = new System.Drawing.Size(98, 22);
+            this.txtValorPagamento.TabIndex = 25;
+            // 
+            // lblJanelaPagamento
+            // 
+            this.lblJanelaPagamento.AutoSize = true;
+            this.lblJanelaPagamento.Location = new System.Drawing.Point(399, 13);
+            this.lblJanelaPagamento.Name = "lblJanelaPagamento";
+            this.lblJanelaPagamento.Size = new System.Drawing.Size(58, 16);
+            this.lblJanelaPagamento.TabIndex = 24;
+            this.lblJanelaPagamento.Text = "Janela: ";
+            // 
+            // cbJanelaPagamento
+            // 
+            this.cbJanelaPagamento.FormattingEnabled = true;
+            this.cbJanelaPagamento.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            this.cbJanelaAeB.Location = new System.Drawing.Point(461, 11);
-            this.cbJanelaAeB.Name = "cbJanelaAeB";
-            this.cbJanelaAeB.Size = new System.Drawing.Size(53, 24);
-            this.cbJanelaAeB.TabIndex = 15;
+            this.cbJanelaPagamento.Location = new System.Drawing.Point(463, 10);
+            this.cbJanelaPagamento.Name = "cbJanelaPagamento";
+            this.cbJanelaPagamento.Size = new System.Drawing.Size(53, 24);
+            this.cbJanelaPagamento.TabIndex = 23;
             // 
-            // txtDescAeB
+            // btnLancarPagamento
             // 
-            this.txtDescAeB.Location = new System.Drawing.Point(420, 46);
-            this.txtDescAeB.Name = "txtDescAeB";
-            this.txtDescAeB.Size = new System.Drawing.Size(98, 22);
-            this.txtDescAeB.TabIndex = 20;
+            this.btnLancarPagamento.Location = new System.Drawing.Point(422, 108);
+            this.btnLancarPagamento.Name = "btnLancarPagamento";
+            this.btnLancarPagamento.Size = new System.Drawing.Size(75, 30);
+            this.btnLancarPagamento.TabIndex = 22;
+            this.btnLancarPagamento.Text = "Lançar";
+            this.btnLancarPagamento.UseVisualStyleBackColor = true;
+            this.btnLancarPagamento.Click += new System.EventHandler(this.btnLancarPagamento_Click);
             // 
-            // lblDescAeB
+            // gpPagamento
             // 
-            this.lblDescAeB.AutoSize = true;
-            this.lblDescAeB.Location = new System.Drawing.Point(378, 49);
-            this.lblDescAeB.Name = "lblDescAeB";
-            this.lblDescAeB.Size = new System.Drawing.Size(41, 16);
-            this.lblDescAeB.TabIndex = 19;
-            this.lblDescAeB.Text = "Desc:";
+            this.gpPagamento.Controls.Add(this.btnMasterDebito);
+            this.gpPagamento.Controls.Add(this.btnMasterCredito);
+            this.gpPagamento.Location = new System.Drawing.Point(17, 13);
+            this.gpPagamento.Name = "gpPagamento";
+            this.gpPagamento.Size = new System.Drawing.Size(358, 142);
+            this.gpPagamento.TabIndex = 21;
+            this.gpPagamento.TabStop = false;
+            this.gpPagamento.Text = "Pagamentos";
             // 
-            // lblValorAeB
+            // btnMasterDebito
             // 
-            this.lblValorAeB.AutoSize = true;
-            this.lblValorAeB.Location = new System.Drawing.Point(375, 83);
-            this.lblValorAeB.Name = "lblValorAeB";
-            this.lblValorAeB.Size = new System.Drawing.Size(44, 16);
-            this.lblValorAeB.TabIndex = 18;
-            this.lblValorAeB.Text = "Valor:";
+            this.btnMasterDebito.Location = new System.Drawing.Point(108, 21);
+            this.btnMasterDebito.Name = "btnMasterDebito";
+            this.btnMasterDebito.Size = new System.Drawing.Size(96, 46);
+            this.btnMasterDebito.TabIndex = 1;
+            this.btnMasterDebito.Text = "Master Debito";
+            this.btnMasterDebito.UseVisualStyleBackColor = true;
+            this.btnMasterDebito.Click += new System.EventHandler(this.btnMasterDebito_Click);
             // 
-            // txtValorAeB
+            // btnMasterCredito
             // 
-            this.txtValorAeB.Location = new System.Drawing.Point(420, 80);
-            this.txtValorAeB.Name = "txtValorAeB";
-            this.txtValorAeB.Size = new System.Drawing.Size(98, 22);
-            this.txtValorAeB.TabIndex = 17;
+            this.btnMasterCredito.Location = new System.Drawing.Point(6, 21);
+            this.btnMasterCredito.Name = "btnMasterCredito";
+            this.btnMasterCredito.Size = new System.Drawing.Size(96, 46);
+            this.btnMasterCredito.TabIndex = 0;
+            this.btnMasterCredito.Text = "Master Credito";
+            this.btnMasterCredito.UseVisualStyleBackColor = true;
+            this.btnMasterCredito.Click += new System.EventHandler(this.btnMasterCredito_Click);
+            // 
+            // lblReserva
+            // 
+            this.lblReserva.AutoSize = true;
+            this.lblReserva.Location = new System.Drawing.Point(7, 9);
+            this.lblReserva.Name = "lblReserva";
+            this.lblReserva.Size = new System.Drawing.Size(66, 16);
+            this.lblReserva.TabIndex = 5;
+            this.lblReserva.Text = "Reserva: ";
+            // 
+            // txtIdHospede
+            // 
+            this.txtIdHospede.Location = new System.Drawing.Point(220, 6);
+            this.txtIdHospede.Name = "txtIdHospede";
+            this.txtIdHospede.ReadOnly = true;
+            this.txtIdHospede.Size = new System.Drawing.Size(53, 22);
+            this.txtIdHospede.TabIndex = 9;
+            // 
+            // txtReserva
+            // 
+            this.txtReserva.Location = new System.Drawing.Point(79, 6);
+            this.txtReserva.Name = "txtReserva";
+            this.txtReserva.ReadOnly = true;
+            this.txtReserva.Size = new System.Drawing.Size(53, 22);
+            this.txtReserva.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(144, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Hospede: ";
             // 
             // Lancamento
             // 
@@ -381,6 +496,9 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.gpbAEB.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.gpPagamento.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -416,5 +534,15 @@
         private System.Windows.Forms.TextBox txtValorAeB;
         private System.Windows.Forms.Label lblJanelaAeB;
         private System.Windows.Forms.ComboBox cbJanelaAeB;
+        private System.Windows.Forms.TextBox txtDescPagamento;
+        private System.Windows.Forms.Label lblDescPagamento;
+        private System.Windows.Forms.Label lblValorPagamento;
+        private System.Windows.Forms.TextBox txtValorPagamento;
+        private System.Windows.Forms.Label lblJanelaPagamento;
+        private System.Windows.Forms.ComboBox cbJanelaPagamento;
+        private System.Windows.Forms.Button btnLancarPagamento;
+        private System.Windows.Forms.GroupBox gpPagamento;
+        private System.Windows.Forms.Button btnMasterDebito;
+        private System.Windows.Forms.Button btnMasterCredito;
     }
 }

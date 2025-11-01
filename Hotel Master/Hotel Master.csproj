@@ -107,36 +107,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Caixa.cs">
+    <Compile Include="View\Caixa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Caixa.Designer.cs">
+    <Compile Include="View\Caixa.Designer.cs">
       <DependentUpon>Caixa.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Conecta.cs" />
-    <Compile Include="Lancamento.cs">
+    <Compile Include="View\Lancamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Lancamento.Designer.cs">
+    <Compile Include="View\Lancamento.Designer.cs">
       <DependentUpon>Lancamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Conecta.cs" />
-    <Compile Include="HotelMaster.cs">
+    <Compile Include="View\HotelMaster.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HotelMaster.Designer.cs">
+    <Compile Include="View\HotelMaster.Designer.cs">
       <DependentUpon>HotelMaster.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManutencaoDeUsuario.cs">
+    <Compile Include="View\ManutencaoDeUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManutencaoDeUsuario.Designer.cs">
+    <Compile Include="View\ManutencaoDeUsuario.Designer.cs">
       <DependentUpon>ManutencaoDeUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuApoio.cs">
+    <Compile Include="View\MenuApoio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuApoio.Designer.cs">
+    <Compile Include="View\MenuApoio.Designer.cs">
       <DependentUpon>MenuApoio.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Categoria.cs" />
@@ -148,35 +148,35 @@
     <Compile Include="Model\StatusReserva.cs" />
     <Compile Include="Model\Tarifa.cs" />
     <Compile Include="Model\Usuario.cs" />
-    <Compile Include="NovaReserva.cs">
+    <Compile Include="View\NovaReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NovaReserva.Designer.cs">
+    <Compile Include="View\NovaReserva.Designer.cs">
       <DependentUpon>NovaReserva.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProcuraReserva.cs">
+    <Compile Include="View\ProcuraReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProcuraReserva.Designer.cs">
+    <Compile Include="View\ProcuraReserva.Designer.cs">
       <DependentUpon>ProcuraReserva.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProcuraTarifa.cs">
+    <Compile Include="View\ProcuraTarifa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProcuraTarifa.Designer.cs">
+    <Compile Include="View\ProcuraTarifa.Designer.cs">
       <DependentUpon>ProcuraTarifa.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaDeGovernanca.cs">
+    <Compile Include="View\TelaDeGovernanca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaDeGovernanca.Designer.cs">
+    <Compile Include="View\TelaDeGovernanca.Designer.cs">
       <DependentUpon>TelaDeGovernanca.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Usuario.cs" />
-    <Compile Include="TelaDeLogin.cs">
+    <Compile Include="View\TelaDeLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaDeLogin.Designer.cs">
+    <Compile Include="View\TelaDeLogin.Designer.cs">
       <DependentUpon>TelaDeLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -188,40 +188,40 @@
       <DependentUpon>.cs</DependentUpon>
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TrocaDeSenha.cs">
+    <Compile Include="View\TrocaDeSenha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TrocaDeSenha.Designer.cs">
+    <Compile Include="View\TrocaDeSenha.Designer.cs">
       <DependentUpon>TrocaDeSenha.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Caixa.resx">
+    <EmbeddedResource Include="View\Caixa.resx">
       <DependentUpon>Caixa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lancamento.resx">
+    <EmbeddedResource Include="View\Lancamento.resx">
       <DependentUpon>Lancamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManutencaoDeUsuario.resx">
+    <EmbeddedResource Include="View\ManutencaoDeUsuario.resx">
       <DependentUpon>ManutencaoDeUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuApoio.resx">
+    <EmbeddedResource Include="View\MenuApoio.resx">
       <DependentUpon>MenuApoio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NovaReserva.resx">
+    <EmbeddedResource Include="View\NovaReserva.resx">
       <DependentUpon>NovaReserva.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProcuraReserva.resx">
+    <EmbeddedResource Include="View\ProcuraReserva.resx">
       <DependentUpon>ProcuraReserva.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProcuraTarifa.resx">
+    <EmbeddedResource Include="View\ProcuraTarifa.resx">
       <DependentUpon>ProcuraTarifa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaDeGovernanca.resx">
+    <EmbeddedResource Include="View\TelaDeGovernanca.resx">
       <DependentUpon>TelaDeGovernanca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HotelMaster.resx">
+    <EmbeddedResource Include="View\HotelMaster.resx">
       <DependentUpon>HotelMaster.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaDeLogin.resx">
+    <EmbeddedResource Include="View\TelaDeLogin.resx">
       <DependentUpon>TelaDeLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -237,7 +237,7 @@
     <EmbeddedResource Include=".resx">
       <DependentUpon>.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TrocaDeSenha.resx">
+    <EmbeddedResource Include="View\TrocaDeSenha.resx">
       <DependentUpon>TrocaDeSenha.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

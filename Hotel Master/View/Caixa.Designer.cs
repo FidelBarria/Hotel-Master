@@ -66,6 +66,7 @@
             this.lblSaldo = new System.Windows.Forms.Label();
             this.txtSaldo = new System.Windows.Forms.TextBox();
             this.btnAtualiza = new System.Windows.Forms.Button();
+            this.btnEncerrarConta = new System.Windows.Forms.Button();
             this.panPrincipal.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panMovimentacao.SuspendLayout();
@@ -98,14 +99,16 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.btnEncerrarConta, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnLancar, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(765, 94);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.614786F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.65764F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.76596F));
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.593585F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.588813F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.8176F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(119, 517);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
@@ -114,7 +117,7 @@
             this.btnLancar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnLancar.Location = new System.Drawing.Point(3, 3);
             this.btnLancar.Name = "btnLancar";
-            this.btnLancar.Size = new System.Drawing.Size(113, 28);
+            this.btnLancar.Size = new System.Drawing.Size(113, 26);
             this.btnLancar.TabIndex = 0;
             this.btnLancar.Text = "Lançar";
             this.btnLancar.UseVisualStyleBackColor = true;
@@ -374,6 +377,7 @@
             // rtObservacao
             // 
             this.rtObservacao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtObservacao.Enabled = false;
             this.rtObservacao.Location = new System.Drawing.Point(0, 0);
             this.rtObservacao.Name = "rtObservacao";
             this.rtObservacao.Size = new System.Drawing.Size(458, 88);
@@ -531,6 +535,17 @@
             this.btnAtualiza.UseVisualStyleBackColor = true;
             this.btnAtualiza.Click += new System.EventHandler(this.btnAtualiza_Click);
             // 
+            // btnEncerrarConta
+            // 
+            this.btnEncerrarConta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEncerrarConta.Location = new System.Drawing.Point(3, 35);
+            this.btnEncerrarConta.Name = "btnEncerrarConta";
+            this.btnEncerrarConta.Size = new System.Drawing.Size(113, 26);
+            this.btnEncerrarConta.TabIndex = 1;
+            this.btnEncerrarConta.Text = "Encerrar Conta";
+            this.btnEncerrarConta.UseVisualStyleBackColor = true;
+            this.btnEncerrarConta.Click += new System.EventHandler(this.btnEncerrarConta_Click);
+            // 
             // Caixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -609,5 +624,6 @@
         private System.Windows.Forms.Label lblValorSelecionadoJanela3;
         private System.Windows.Forms.Label lblValorTotalJanela2;
         private System.Windows.Forms.Button btnAtualiza;
+        private System.Windows.Forms.Button btnEncerrarConta;
     }
 }

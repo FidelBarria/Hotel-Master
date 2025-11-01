@@ -87,44 +87,44 @@ namespace Hotel_Master
             janela4.RowFilter = "janela = 4";
             dtgCaixa4.DataSource = janela4;
 
-            double valorTotalJanela1 = 0;
+            decimal valorTotalJanela1 = 0;
             foreach (DataGridViewRow row in dtgCaixa1.Rows)
             {
                 if (row.Cells["valormovimentacao"] != null)
                 {
-                    valorTotalJanela1 += Convert.ToSingle(row.Cells["valormovimentacao"].Value);
+                    valorTotalJanela1 += Convert.ToDecimal(row.Cells["valormovimentacao"].Value);
                 }
                 lblValorTotalJanela1.Text = valorTotalJanela1.ToString();
             }
-            double valorTotalJanela2 = 0;
+            decimal valorTotalJanela2 = 0;
             foreach (DataGridViewRow row in dtgCaixa2.Rows)
             {
                 if (row.Cells["valormovimentacao"] != null)
                 {
-                    valorTotalJanela2 += Convert.ToSingle(row.Cells["valormovimentacao"].Value);
+                    valorTotalJanela2 += Convert.ToDecimal(row.Cells["valormovimentacao"].Value);
                 }
                 lblValorTotalJanela2.Text = valorTotalJanela2.ToString();
             }
-            double valorTotalJanela3 = 0;
+            decimal valorTotalJanela3 = 0;
             foreach (DataGridViewRow row in dtgCaixa3.Rows)
             {
                 if (row.Cells["valormovimentacao"] != null)
                 {
-                    valorTotalJanela3 += Convert.ToSingle(row.Cells["valormovimentacao"].Value);
+                    valorTotalJanela3 += Convert.ToDecimal(row.Cells["valormovimentacao"].Value);
                 }
                 lblValorTotalJanela3.Text = valorTotalJanela3.ToString();
             }
-            double valorTotalJanela4 = 0;
+            decimal valorTotalJanela4 = 0;
             foreach (DataGridViewRow row in dtgCaixa4.Rows)
             {
                 if (row.Cells["valormovimentacao"] != null)
                 {
-                    valorTotalJanela4 += Convert.ToSingle(row.Cells["valormovimentacao"].Value);
+                    valorTotalJanela4 += Convert.ToDecimal(row.Cells["valormovimentacao"].Value);
                 }
                 lblValorTotalJanela4.Text = valorTotalJanela4.ToString();
             }
 
-            double valorTotalGeral = valorTotalJanela1 + valorTotalJanela2 + valorTotalJanela3 + valorTotalJanela4;
+            decimal valorTotalGeral = valorTotalJanela1 + valorTotalJanela2 + valorTotalJanela3 + valorTotalJanela4;
             txtSaldo.Text = valorTotalGeral.ToString();
         }
 
@@ -359,6 +359,11 @@ namespace Hotel_Master
         private void btnAtualiza_Click(object sender, EventArgs e)
         {
             carregaJanelaCaixa();
+        }
+
+        private void btnEncerrarConta_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
