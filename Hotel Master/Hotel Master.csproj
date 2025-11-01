@@ -114,12 +114,6 @@
       <DependentUpon>Caixa.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Conecta.cs" />
-    <Compile Include="HotelMaster.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HotelMaster.Designer.cs">
-      <DependentUpon>HotelMaster.cs</DependentUpon>
-    </Compile>
     <Compile Include="Lancamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,9 +197,6 @@
     <EmbeddedResource Include="Caixa.resx">
       <DependentUpon>Caixa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HotelMaster.resx">
-      <DependentUpon>HotelMaster.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Lancamento.resx">
       <DependentUpon>Lancamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,9 +220,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HotelMaster.resx">
       <DependentUpon>HotelMaster.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManutencaoDeUsuario.resx">
-      <DependentUpon>ManutencaoDeUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaDeLogin.resx">
       <DependentUpon>TelaDeLogin.cs</DependentUpon>
